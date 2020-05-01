@@ -1,0 +1,32 @@
+class Solution {
+public:
+    
+    bool isValidSudoku(vector<vector<char>>& board) 
+    {
+        bool hang[9][10]; 
+        bool lie[9][10];
+        bool kuai[3][3][10];
+        memset(hang,false,sizeof hang);
+        memset(lie,false,sizeof lie);
+        memset(kuai,false,sizeof kuai);
+        for(int i=0;i<9;i++)
+        {
+            for(int j=0;j<9;j++)
+            {
+                if(board[i][j]!='.')
+                {
+                    int tmp=board[i][j]-'0';
+                    if(hang[i][tmp]|| lie[j][tmp]|| kuai[i/3][j/3][tmp])
+                        return false;
+                    hang[i][tmp]=true;
+                    lie[j][tmp]=true;
+                    kuai[i/3][j/3][tmp]=true;
+                }
+            }
+        }
+        return true;
+
+
+
+    }
+};

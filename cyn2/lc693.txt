@@ -1,0 +1,38 @@
+class Solution {
+public:
+    bool hasAlternatingBits(int n) 
+    {
+        //if(n==0) return true;
+        int tmp=n&1;
+        bool flag0=false;//上一个是0，轮到1了
+        if(tmp==0) flag0=true;
+        n>>=1;
+
+        while(n)
+        {
+            int t=n&1;
+            if(flag0)
+            {
+                if(t==0) return false;
+            }
+            else//flag0==false
+            {
+                if(t==1) return false;
+            }
+
+            if(t==0)
+            {
+                flag0=true;
+            }
+            else
+            {
+                flag0=false;
+            }
+
+            n>>=1;
+
+        }
+        return true;
+
+    }
+};

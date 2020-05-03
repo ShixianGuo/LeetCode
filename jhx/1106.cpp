@@ -44,20 +44,23 @@ class Solution {
         }else if(peek()=='!'){
             match(peek(),'!');
             match(peek(),'(');
-            return !expr();
+            bool e=expr();
             match(peek(),')');
+            return !e;
+            
         }else if(peek()=='&'){
             match(peek(),'&');
             match(peek(),'(');
             bool e=expr(),em=exprmore('&');
-             return e&&em;
             match(peek(),')');
+            return e&&em;
         }else if(peek()=='|'){
             match(peek(),'|');
             match(peek(),'(');
             bool e=expr(),em=exprmore('|');
-            return e||em;
             match(peek(),')');
+            return e||em;
+            
         }
         return true;
         
@@ -105,6 +108,6 @@ public:
 int main(){
     Solution s;
     //&(!(&(f)),&(t),|(f,f,t)),&(t),&(t,t,f)
-    cout<<s.parseBoolExpr("!(&(&(!(&(f)),&(t),|(f,f,t)),&(t),&(t,t,f)))")<<endl;;
+    cout<<s.parseBoolExpr("!(f)")<<endl;;
 
 }

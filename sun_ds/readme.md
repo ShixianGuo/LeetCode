@@ -14,4 +14,7 @@
 |剑指|面试题55 - I|[二叉树的深度](https://leetcode-cn.com/problems/er-cha-shu-de-shen-du-lcof/)|[C++](./jz-55-1_maxDepth.cpp)|简单|递归、迭代|
 |剑指|面试题07|[重建二叉树](https://leetcode-cn.com/problems/zhong-jian-er-cha-shu-lcof/)|[C++](./jz-7_buildTree.cpp)|中等|前序分割中序|
 |金典|面试题 16.03|[交点](https://leetcode-cn.com/problems/intersection-lcci/)|[C++](./jd-16.03_intersection.cpp)|困难|数学|
-
+|2020.5.3|
+| |693|[交替位二进制数](https://leetcode-cn.com/problems/binary-number-with-alternating-bits/)|[C++](./693_hasAlternatingBits.cpp)|简单|位运算|
+| |535|[TinyURL 的加密与解密](https://leetcode-cn.com/problems/encode-and-decode-tinyurl/)|[C++](./535_TinyURL.cpp)|中等|62进制|
+| |1106|[解析布尔表达式](https://leetcode-cn.com/problems/parsing-a-boolean-expression/)|[C++](./1106_parseBoolExpr.cpp)|困难|栈|

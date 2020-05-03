@@ -15,3 +15,7 @@
 5.2
 
 刷题记录：[面试题55 - I. 二叉树的深度](https://leetcode-cn.com/problems/er-cha-shu-de-shen-du-lcof/)(E) [面试题07. 重建二叉树](https://leetcode-cn.com/problems/zhong-jian-er-cha-shu-lcof/)(M) 
+
+5.3
+
+刷题记录：[693. 交替位二进制数](https://leetcode-cn.com/problems/binary-number-with-alternating-bits/)(E) [535. TinyURL 的加密与解密](https://leetcode-cn.com/problems/encode-and-decode-tinyurl/)(M) [1106. 解析布尔表达式](https://leetcode-cn.com/problems/parsing-a-boolean-expression/)(H)

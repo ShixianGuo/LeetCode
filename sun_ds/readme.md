@@ -18,3 +18,7 @@
 | |693|[交替位二进制数](https://leetcode-cn.com/problems/binary-number-with-alternating-bits/)|[C++](./693_hasAlternatingBits.cpp)|简单|位运算|
 | |535|[TinyURL 的加密与解密](https://leetcode-cn.com/problems/encode-and-decode-tinyurl/)|[C++](./535_TinyURL.cpp)|中等|62进制|
 | |1106|[解析布尔表达式](https://leetcode-cn.com/problems/parsing-a-boolean-expression/)|[C++](./1106_parseBoolExpr.cpp)|困难|栈|
+|2020.5.4|
+|金典|面试题 05.06|[整数转换](https://leetcode-cn.com/problems/convert-integer-lcci/)|[C++](./jd-05.06_convertInteger.cpp)|简单|temp&-temp、temp&temp-1|
+|剑指|面试题48|[最长不含重复字符的子字符串](https://leetcode-cn.com/problems/zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof/)|[C++](./jz-48_lengthOfLongestSubstring.cpp)|中等|滑动窗口|
+| |42|[接雨水](https://leetcode-cn.com/problems/trapping-rain-water/)|[C++](./42_trap.cpp)|困难|双指针、单调栈|

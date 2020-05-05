@@ -27,3 +27,8 @@
 学习总结：学习知识点——动态规划、单调栈、双指针
 
 下一步计划：继续刷题，继续学习数据结构与算法相关知识
+
+5.5
+
+刷题记录：[824. 山羊拉丁文](https://leetcode-cn.com/problems/goat-latin/)(E) [面试题 02.05. 链表求和](https://leetcode-cn.com/problems/sum-lists-lcci/)(M) [23. 合并K个排序链表](https://leetcode-cn.com/problems/merge-k-sorted-lists/)(H)
+

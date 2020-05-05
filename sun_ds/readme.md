@@ -22,3 +22,7 @@
 |金典|面试题 05.06|[整数转换](https://leetcode-cn.com/problems/convert-integer-lcci/)|[C++](./jd-05.06_convertInteger.cpp)|简单|temp&-temp、temp&temp-1|
 |剑指|面试题48|[最长不含重复字符的子字符串](https://leetcode-cn.com/problems/zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof/)|[C++](./jz-48_lengthOfLongestSubstring.cpp)|中等|滑动窗口|
 | |42|[接雨水](https://leetcode-cn.com/problems/trapping-rain-water/)|[C++](./42_trap.cpp)|困难|双指针、单调栈|
+|2020.5.5|
+| |824|[山羊拉丁文](https://leetcode-cn.com/problems/goat-latin/)|[C++](./824_toGoatLatin.cpp)|简单|字符串处理|
+|金典|面试题 02.05|[链表求和](https://leetcode-cn.com/problems/sum-lists-lcci/)|[C++](./jd-02.05_addTwoNumbers.cpp)|中等|链表求和|
+| |23|[合并K个排序链表](https://leetcode-cn.com/problems/merge-k-sorted-lists/)|[C++](./23_mergeKLists.cpp)|困难|优先队列|

@@ -1,0 +1,18 @@
+class Solution {
+public:
+    int i = 0;
+    map<int, string> mmap;
+
+    // Encodes a URL to a shortened URL.
+    string encode(string longUrl) {
+        mmap[i] = longUrl;
+        return "http://" + to_string(i++);
+    }
+
+    // Decodes a shortened URL to its original URL.
+    string decode(string shortUrl) {
+        int key = stol(shortUrl.substr(7, shortUrl.length() - 7));
+        return mmap[key];
+    }
+};
+

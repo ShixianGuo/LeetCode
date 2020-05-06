@@ -7,17 +7,15 @@ public:
             if (ip[i] == ':' || ip[i] == '\0'){
                 if (temp.length() > 4 || temp.length() == 0)
                     return false;
-                if (temp.length() == 1 && temp[0] != '0')
-                    return false;
-                /*if (temp.length() > 1 && temp[0] == '0')
-                    return false;*/
                 temp.clear();
                 ++cnt;
             }
             else {
-                if (temp[0] >= 'a' && temp[0] <= 'f')
+                if (ip[i] >= 'a' && ip[i] <= 'f')
                     temp.push_back(ip[i]);
-                else if (temp[0] >= 'A' && temp[0] <= 'F')
+                else if (ip[i] >= 'A' && ip[i] <= 'F')
+                    temp.push_back(ip[i]);
+                else if (ip[i] >= '0' && ip[i] <= '9')
                     temp.push_back(ip[i]);
                 else 
                     return false;
@@ -62,7 +60,7 @@ public:
             return "Neither";
         if (IP.length() > 39)
             return "Neither";
-        if (IP[4] == ':'){
+        if (IP[1] == ':' || IP[2] == ':' || IP[3] == ':' || IP[4] == ':'){
             bool flag = true;
             flag = isIPv6(IP);
             if (flag == false)

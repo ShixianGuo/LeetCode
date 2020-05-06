@@ -32,3 +32,10 @@
 
 刷题记录：[824. 山羊拉丁文](https://leetcode-cn.com/problems/goat-latin/)(E) [面试题 02.05. 链表求和](https://leetcode-cn.com/problems/sum-lists-lcci/)(M) [23. 合并K个排序链表](https://leetcode-cn.com/problems/merge-k-sorted-lists/)(H)
 
+5.6
+
+刷题记录：[1290. 二进制链表转整数](https://leetcode-cn.com/problems/convert-binary-number-in-a-linked-list-to-integer/)(E) [468. 验证IP地址](https://leetcode-cn.com/problems/validate-ip-address/)(M) [1220. 统计元音字母序列的数目](https://leetcode-cn.com/problems/count-vowels-permutation/)(H)
+
+学习总结：刷题、学习剑指offer
+
+下一步计划：继续刷题，继续学习数据结构与算法相关知识

@@ -39,3 +39,7 @@
 学习总结：刷题、学习剑指offer
 
 下一步计划：继续刷题，继续学习数据结构与算法相关知识
+
+5.7
+
+刷题记录：[7. 整数反转](https://leetcode-cn.com/problems/reverse-integer/)(E) [98. 验证二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree/)(M) [41. 缺失的第一个正数](https://leetcode-cn.com/problems/first-missing-positive/)(H)

@@ -122,4 +122,50 @@ public:
             return "IPv6";;
         }
     }
+    };
+------------------------------------------------------------------------------------------------------------------------------
+5.7 day 2
+
+7.整数反转 逐位取值然后倒序输出
+
+98. 验证二叉搜索树
+中序遍历后看是否升序就好了
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    void checkFunc(TreeNode* node,vector<int>& data){
+        if(node==nullptr) return;
+
+        if(node->left!=nullptr){
+            checkFunc(node->left,data);
+        }
+
+        data.push_back(node->val);
+
+        if(node->right!=nullptr){
+            checkFunc(node->right,data);
+        }
+    }
+
+    bool isValidBST(TreeNode* root) {
+        vector<int>data;
+        checkFunc(root,data);
+        if(data.size()<=1) return true;
+        for(int i=0;i<data.size()-1;i++){
+            cout<<data[i]<<endl;
+            if(data[i]>=data[i+1]){
+                return false;
+            }
+        }
+        return true;
+
+    }
 };

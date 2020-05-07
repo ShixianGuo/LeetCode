@@ -1,0 +1,15 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "任务-LeetCode_0507_206_01",
+      "appliesTo": "zsg/day01/LeetCode_0507_206_01.cpp",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "任务-LeetCode",
+      "appliesTo": "/",
+      "type": "launch"
+    }
+  ]
+}

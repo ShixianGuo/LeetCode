@@ -16,6 +16,8 @@ private:
 
 
 
+
+
 public:
      string encode(string longUrl) {
         while (m_map.find(key)!=m_map.end()) {

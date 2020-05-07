@@ -26,3 +26,7 @@
 | |824|[山羊拉丁文](https://leetcode-cn.com/problems/goat-latin/)|[C++](./824_toGoatLatin.cpp)|简单|字符串处理|
 |金典|面试题 02.05|[链表求和](https://leetcode-cn.com/problems/sum-lists-lcci/)|[C++](./jd-02.05_addTwoNumbers.cpp)|中等|链表求和|
 | |23|[合并K个排序链表](https://leetcode-cn.com/problems/merge-k-sorted-lists/)|[C++](./23_mergeKLists.cpp)|困难|优先队列|
+|2020.5.6|
+| |1290|[二进制链表转整数](https://leetcode-cn.com/problems/convert-binary-number-in-a-linked-list-to-integer/)|[C++](./1290_getDecimalValue.cpp)|简单||
+| |468|[验证IP地址](https://leetcode-cn.com/problems/validate-ip-address/)|[C++](./468_validIPAddress.cpp)|中等|字符串|
+| |1220|[统计元音字母序列的数目](https://leetcode-cn.com/problems/count-vowels-permutation/)|[C++](./1220_countVowelPermutation.cpp)|困难|dp|

@@ -30,3 +30,7 @@
 | |1290|[二进制链表转整数](https://leetcode-cn.com/problems/convert-binary-number-in-a-linked-list-to-integer/)|[C++](./1290_getDecimalValue.cpp)|简单||
 | |468|[验证IP地址](https://leetcode-cn.com/problems/validate-ip-address/)|[C++](./468_validIPAddress.cpp)|中等|字符串|
 | |1220|[统计元音字母序列的数目](https://leetcode-cn.com/problems/count-vowels-permutation/)|[C++](./1220_countVowelPermutation.cpp)|困难|dp|
+|2020.5.7|
+| |7|[整数反转](https://leetcode-cn.com/problems/reverse-integer/)|[C++](./7_reverse.cpp)|简单|注意溢出|
+| |98|[验证二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree/)|[C++](./98_isValidBST.cpp)|中等|递归|
+| |41|[缺失的第一个正数](https://leetcode-cn.com/problems/first-missing-positive/)|[C++](./41_firstMissingPositive.cpp)|困难|哈希|

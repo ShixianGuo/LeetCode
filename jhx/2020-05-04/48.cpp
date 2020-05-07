@@ -39,7 +39,7 @@ public:
             auto res=um.find(s[right]);
             if(um.end()!=res){
                 int a=res->second;
-                while(left<=right&&left<=res->second){
+                while(left<=right&&left<=a){
                     um.erase(s[left]);
                     left++;
                     val--;

@@ -1,0 +1,76 @@
+class Solution {
+public:
+    stack<char> tf;
+    bool an()
+    {
+        bool res=true;
+        while(tf.top()!='(')
+        {
+            if(tf.top()=='f') res= false;
+            tf.pop();
+        }
+        tf.pop();
+        if(!res) return false;
+        return true;
+
+    }
+    bool o()
+    {
+        bool res=false;
+        while(tf.top()!='(')
+        {
+            if(tf.top()=='t') res= true;
+            tf.pop();
+        }
+        tf.pop();
+        if(res) return true;
+        return false;
+
+
+    }
+    bool no()
+    {
+        if(tf.top()=='t') 
+            {
+                tf.pop();
+                tf.pop();
+                return false;
+            }
+            else
+            {
+                tf.pop();
+                tf.pop();
+                return true;
+            }
+
+    }
+
+    bool parseBoolExpr(string expression) 
+    {
+        stack<char> fuhao;
+        for(auto x:expression)
+        {
+            if(x=='t'||x=='f'||x==','||x=='('||x==')')
+            {
+                if(x==')')
+                {
+                    bool res;
+                    if(fuhao.top()=='!') res=no();
+                    else if(fuhao.top()=='&') res=an();
+                    else res=o();
+                    if(res) tf.push('t');
+                    else tf.push('f');
+                    fuhao.pop();
+                }
+                else if(x!=',') tf.push(x);
+            }
+            else
+            {
+                fuhao.push(x);  
+            }
+        }
+        if(tf.top()=='t') return true ;
+        else return false;
+
+    }
+};

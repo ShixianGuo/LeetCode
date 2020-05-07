@@ -1,0 +1,29 @@
+leetcode572:另一个树的子树
+
+关键字：树的遍历
+
+思路：判断t是否为s的子树（注意不是子结构，子结构可以要求t包含的叶子节点只是s的中间一部分，但是子树就得包含s中某节点以下的所有节点）
+t是s的子树有三种情况：
+1、t和s相同
+2、t是s的左子树
+3、t是s的右子树
+
+题解：
+class Solution {
+public:
+    
+    bool isSubtree(TreeNode* s, TreeNode* t) {
+        if(s==nullptr&&t==nullptr) return true;
+        if(s==nullptr&&t!=nullptr) return false;
+        
+        //先判断s和t是否相同，再判断t是否为s的左子树即和s->left是否相同，接着再判断t是否为s的右子树即和s->right是否相同
+        return dfs(s,t)||isSubtree(s->left,t)||isSubtree(s->right,t);
+    }
+
+    //遍历两棵树各以某节点开始是否相等
+    bool dfs(TreeNode* s,TreeNode* t){
+        if(s==nullptr&&t==nullptr) return true;
+
+        return s&&t&&s->val==t->val&&dfs(s->left,t->left)&&dfs(s->right,t->right);
+    }
+};

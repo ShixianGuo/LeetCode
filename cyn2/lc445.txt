@@ -1,0 +1,119 @@
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* reverselist(ListNode* head)
+    {
+        ListNode* cur=head;
+        ListNode* pre=NULL;
+        ListNode* ne=head;
+        while(cur)
+        {
+            ne=cur->next;
+            cur->next=pre;
+            pre=cur;
+            cur=ne;
+
+        }
+        return pre;
+
+    }
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) 
+    {
+        stack<int> s1,s2;
+        ListNode* p1=l1; ListNode* p2=l2;
+        ListNode* dummy=new ListNode(-1);
+        ListNode* p=dummy;
+        while(p1)
+        {
+            s1.push(p1->val);
+            p1=p1->next;
+        }
+        while(p2)
+        {
+            s2.push(p2->val);
+            p2=p2->next;
+        }
+        if(s1.empty() && s2.empty()) return NULL;
+        int carry=0;
+        while(!s1.empty() || !s2.empty() || carry>0)
+        {
+            int sum=carry;
+            if(!s1.empty())
+            {
+                sum+=s1.top();
+                s1.pop();
+            }
+            if(!s2.empty())
+            {
+                sum+=s2.top();
+                s2.pop();
+            }
+            carry=sum/10;
+            p->next=new ListNode(sum%10);
+            p=p->next;
+        }
+        return reverselist(dummy->next);
+
+    }
+};
+//这样写麻烦了。其实不需要反转链表，直接p=new listnode的next就可以
+
+
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) 
+    {
+        stack<int> s1,s2;
+        ListNode* p1=l1; ListNode* p2=l2;
+        ListNode* dummy=NULL;
+        ListNode* p=dummy;
+        while(p1)
+        {
+            s1.push(p1->val);
+            p1=p1->next;
+        }
+        while(p2)
+        {
+            s2.push(p2->val);
+            p2=p2->next;
+        }
+        if(s1.empty() && s2.empty()) return NULL;
+        int carry=0;
+        while(!s1.empty() || !s2.empty() || carry>0)
+        {
+            int sum=carry;
+            if(!s1.empty())
+            {
+                sum+=s1.top();
+                s1.pop();
+            }
+            if(!s2.empty())
+            {
+                sum+=s2.top();
+                s2.pop();
+            }
+            carry=sum/10;
+            ListNode* node=new ListNode(sum%10);
+            node->next=dummy;
+            dummy=node;
+        }
+        return dummy;
+
+    }
+};

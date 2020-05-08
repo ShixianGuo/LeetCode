@@ -1,0 +1,17 @@
+class Solution {
+public:
+    int add(int a, int b) 
+    {
+        int ans=0,carry=0;
+        while(b!=0)
+        {
+            ans=a^b;
+            int tmp=a&b;
+            carry=(unsigned int) tmp<<1;
+            a=ans;
+            b=carry;
+        }
+        return a;
+    }
+};
+

@@ -1,0 +1,22 @@
+class Solution {
+public:
+    int superEggDrop(int K, int N) 
+    {
+        int dp[K+1][N+1];//i个鸡蛋，移动j次能确定的最大层
+        memset(dp,0,sizeof dp);
+        for(int j=1;j<=N;j++)
+        {
+            for(int i=1;i<=K;i++)
+            {        
+//1.鸡蛋碎了：上面的楼层测试完毕，接下来在更低的楼层试，dp[k-1][m-1]；
+//2.鸡蛋没碎：下面的楼层测试完毕，接下来在更高的楼层试，dp[k][m-1]；
+                dp[i][j]=dp[i-1][j-1]+dp[i][j-1]+1;
+                if(dp[i][j]>=N) return j;
+            }
+        }
+        return N;
+
+
+
+    }
+};

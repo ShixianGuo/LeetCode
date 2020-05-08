@@ -171,3 +171,53 @@ public:
 
     }
 };
+------------------------------------------------------------------------------------------------------------------------------
+5.8 day 3
+
+不用加法实现加法，异或得到非进位加法，与<<1得到进位。考察的是计算机基本原理
+还有一个，减法的实现，其实是通过加法来完成的。
+
+想一下相加顺序，要先入后出，那就是栈了
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        stack<int> x;
+        stack<int> y;
+        while(l1!=nullptr){
+            x.push(l1->val);
+            l1=l1->next;
+        }
+
+        while(l2!=nullptr){
+            y.push(l2->val);
+            l2=l2->next;
+        }
+        ListNode* node=nullptr;
+        int over=0;
+        while(!x.empty()||!y.empty()||over>0){
+            int sum=over;
+            if(!x.empty()){
+                sum+=x.top();
+                x.pop();
+            }
+            if(!y.empty()||!y.empty()){
+                sum+=y.top();
+                y.pop();
+            }
+            ListNode* tmpnode=new ListNode(sum%10);
+            tmpnode->next=node;
+            node=tmpnode;
+            over=sum/10;
+        }
+        return node;
+    }
+};

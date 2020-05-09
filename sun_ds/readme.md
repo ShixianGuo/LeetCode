@@ -34,3 +34,7 @@
 | |7|[整数反转](https://leetcode-cn.com/problems/reverse-integer/)|[C++](./7_reverse.cpp)|简单|注意溢出|
 | |98|[验证二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree/)|[C++](./98_isValidBST.cpp)|中等|递归|
 | |41|[缺失的第一个正数](https://leetcode-cn.com/problems/first-missing-positive/)|[C++](./41_firstMissingPositive.cpp)|困难|哈希|
+|2020.5.8|
+|金典|面试题 17.01|[不用加号的加法](https://leetcode-cn.com/problems/add-without-plus-lcci/)|[C++](./jd-17.01_add.cpp)|简单|位操作|
+| |445|[两数相加 II](https://leetcode-cn.com/problems/add-two-numbers-ii/)|[C++](./445_addTwoNumbers.cpp)|中等|逆序、栈|
+| |887|[鸡蛋掉落](https://leetcode-cn.com/problems/super-egg-drop/)|[C++](./887_superEggDrop.cpp)|困难|dp+二分|

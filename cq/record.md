@@ -43,3 +43,8 @@
 5.7
 
 刷题记录：[7. 整数反转](https://leetcode-cn.com/problems/reverse-integer/)(E) [98. 验证二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree/)(M) [41. 缺失的第一个正数](https://leetcode-cn.com/problems/first-missing-positive/)(H)
+
+5.8
+
+刷题记录：[面试题 17.01. 不用加号的加法](https://leetcode-cn.com/problems/add-without-plus-lcci/)(E) [445. 两数相加 II](https://leetcode-cn.com/problems/add-two-numbers-ii/)(M) [887. 鸡蛋掉落](https://leetcode-cn.com/problems/super-egg-drop/)(H)
+

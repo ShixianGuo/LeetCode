@@ -38,3 +38,7 @@
 |金典|面试题 17.01|[不用加号的加法](https://leetcode-cn.com/problems/add-without-plus-lcci/)|[C++](./jd-17.01_add.cpp)|简单|位操作|
 | |445|[两数相加 II](https://leetcode-cn.com/problems/add-two-numbers-ii/)|[C++](./445_addTwoNumbers.cpp)|中等|逆序、栈|
 | |887|[鸡蛋掉落](https://leetcode-cn.com/problems/super-egg-drop/)|[C++](./887_superEggDrop.cpp)|困难|dp+二分|
+|2020.5.9|
+|剑指|面试题42|[连续子数组的最大和](https://leetcode-cn.com/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof/)|[C++](./jz-42_maxSubArray.cpp)|简单|dp、线段树|
+|剑指|面试题38|[字符串的排列](https://leetcode-cn.com/problems/zi-fu-chuan-de-pai-lie-lcof/)|[C++](./jz-38_permutation.cpp)|中等|回溯法|
+|剑指|面试题51|[数组中的逆序对](https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/)|[C++](./jz-51_reversePairs.cpp)|困难|归并|

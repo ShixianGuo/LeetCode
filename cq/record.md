@@ -48,3 +48,7 @@
 
 刷题记录：[面试题 17.01. 不用加号的加法](https://leetcode-cn.com/problems/add-without-plus-lcci/)(E) [445. 两数相加 II](https://leetcode-cn.com/problems/add-two-numbers-ii/)(M) [887. 鸡蛋掉落](https://leetcode-cn.com/problems/super-egg-drop/)(H)
 
+5.9
+
+刷题记录：[面试题42. 连续子数组的最大和](https://leetcode-cn.com/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof/)(E) [面试题38. 字符串的排列](https://leetcode-cn.com/problems/zi-fu-chuan-de-pai-lie-lcof/)(M) [面试题51. 数组中的逆序对](https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/)(H)
+

@@ -221,3 +221,68 @@ public:
         return node;
     }
 };
+------------------------------------------------------------------------------------------------------------------------------
+5.9 day 4
+面试题42. 连续子数组的最大和 这个和股票的最大收益是一样的
+
+面试题38. 字符串的排列 
+组合的题目，dfs，剪枝。在dfs之前对字符串进行排序。然后dfs中利用visited判断当前字母和上一个是否相同，如果相同，跳过。
+函数外三个全局变量：
+vector<string> res; //保存全部组合结果
+string tmp=""; //中间单个组合的结果
+int n;//记录一共有多少个可选字母
+vector<bool> visited;//记录每个字母是否访问过
+
+
+class Solution {
+public:
+    vector<string> res;
+    string tmp="";
+    vector<bool> visited;
+    int n;
+    void dfs(string s,int count){
+        if(count==n){
+            res.push_back(tmp);
+            return;
+        }
+        else{
+            for(int i=0;i<n;i++){
+                //如果已经选到
+                if(visited[i] ){
+                    continue;
+                }
+                //（当前字母与上一个重复，并且上一个没有选过）
+                if(i>0){
+                    if( s[i]==s[i-1]&&!visited[i-1]){
+                        continue;
+                    }
+                }
+                tmp+=s[i];
+                visited[i]=true;
+                dfs(s,count+1);
+                visited[i]=false;
+                tmp.pop_back();
+            }
+        }
+
+    }
+
+    vector<string> permutation(string s) {
+        if(s.empty()) return res;
+        n=s.size();
+        visited=vector<bool>(n,false);
+        sort(s.begin(),s.end());
+        dfs(s,0);
+        return res;
+    }
+};
+
+
+------------------------------------------------------------------------------------------------------------------------------
+5.10 day 5
+
+70. o爬楼梯，最简单的动态规划例子
+8.atoi 好烦这个题目，可能正如评论所说的，细心也是一种能力
+
+------------------------------------------------------------------------------------------------------------------------------
+5.11 day 6

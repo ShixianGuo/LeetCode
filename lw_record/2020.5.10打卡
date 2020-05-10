@@ -1,0 +1,53 @@
+leetcode_235:二叉搜索树的最近公共祖先
+题解：
+class Solution {
+public:
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+        int root_val=root->val;
+        int p_val=p->val;
+        int q_val=q->val;
+
+        if(p_val>root_val&&q_val>root_val){
+            return lowestCommonAncestor(root->right,p,q);
+        }
+
+        if(p_val<root_val&&q_val<root_val){
+            return lowestCommonAncestor(root->left,p,q);
+        }
+
+        return root;
+    }
+};
+
+
+#########################################
+leetcode_236:二叉树的最近公共祖先
+class Solution {
+public:
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+        if(root==nullptr) return nullptr;
+
+        if(root==p||root==q) return root;
+
+        //搜索左子树和右子树
+        TreeNode* left=lowestCommonAncestor(root->left,p,q);
+        TreeNode* right=lowestCommonAncestor(root->right,p,q);
+
+        //左边为空，说明两个节点都在右子树
+        if(left==nullptr){
+            return right;
+        }
+        //右边为空，说明两个节点都在左子树
+        if(right==nullptr){
+            return left;
+        }
+
+        //左右都不为空，说明该节点的左边和右边各存在p或q，符合条件
+        if(left&&right){
+            return root;
+        }
+
+        return nullptr;
+
+    }
+};

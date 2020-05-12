@@ -1,0 +1,118 @@
+平方根/幂/开根号
+
+############################################
+leetcode_69:x的平方根
+思路：二分查找
+题解：
+class Solution {
+public:
+    int mySqrt(int x) {
+        
+        if(x<=1) return x;
+        
+        //注意溢出
+        long half=x/2;
+        long left=0,right=half;
+        while(left<=right){
+            long mid=left+(right-left)/2;
+
+            if(mid*mid==x) return mid;
+            else if(mid*mid<x) left=mid+1;
+            else right=mid-1;
+
+        }
+        return left-1;
+    }
+};
+
+############################################
+leetcode_367:有效的完全平方数
+思路：二分查找
+题解：
+class Solution {
+public:
+    bool isPerfectSquare(int num) {
+        if(num==1) return true;
+
+        long half=num/2;
+        long left=0,right=half;
+        while(left<=right){
+            long mid=left+(right-left)/2;
+            long square=mid*mid;
+
+            if(square==num) return true;
+            else if(square<num) left=mid+1;
+            else right=mid-1;
+        }
+        return ((left-1)*(left-1))<num?false:true;
+    }
+};
+
+############################################
+leetcode_633:平方数之和
+思路：双指针之头尾指针/对撞指针
+题解：
+class Solution {
+public:
+    bool judgeSquareSum(int c) {
+
+        if(c<=1) return true;
+        long l=0,r=sqrt(c);
+        while(l<=r){
+            long sum=l*l+r*r;
+            if(sum==c) return true;
+            else if(sum<c) l++;
+            else r--;
+        }
+        return false;
+    }
+};
+
+############################################
+leetcode_50:Pow(x,n)
+思路：快速幂
+题解：
+//递归
+class Solution {
+public:
+    double myPow(double x, int n) {
+        if(x==0) return 0;
+        if(n==0) return 1.0;
+
+        long long N=n;
+        if(n<0){
+            x=1/x;
+            N=-N;
+        }
+        return fastpow(x,N);
+    }
+
+    double fastpow(double x,long long n){
+        if(n==0) return 1.0;
+
+        double half=fastpow(x,n/2);
+        if(n%2==0){
+            return half*half;
+        }
+        else{
+            return half*half*x;
+        }
+    }
+};
+//迭代（我的天，这迭代牛逼）
+class Solution {
+public:
+    double myPow(double x, int n) {
+        int temp=n;
+        double ans=1.0;
+        while(n!=0){
+            if((n&1)!=0){
+                ans*=x;
+            }
+            x*=x;
+            n=n/2;
+        }
+
+        return temp>0?ans:1/ans;
+    }
+};

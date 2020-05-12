@@ -59,3 +59,7 @@
 5.11
 
 刷题记录：[21. 合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)(E) [148. 排序链表](https://leetcode-cn.com/problems/sort-list/)(M) [25. K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)(H)
+
+5.12
+
+刷题记录：[13. 罗马数字转整数](https://leetcode-cn.com/problems/roman-to-integer/)(E) [12. 整数转罗马数字](https://leetcode-cn.com/problems/integer-to-roman/)(M) [32. 最长有效括号](https://leetcode-cn.com/problems/longest-valid-parentheses/)(H)

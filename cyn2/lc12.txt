@@ -1,0 +1,30 @@
+class Solution {
+public:
+    string intToRoman(int num) 
+    {
+        unordered_map<int , string> m={{1,"I"},{5,"V"},{10,"X"},{50,"L"},{100,"C"},{500,"D"},{1000,"M"},{4,"IV"},{9,"IX"},{40,"XL"},{90,"XC"},{400,"CD"},{900,"CM"}};
+        vector<int> v={1,5,10,50,100,500,1000,4,9,40,90,400,900};
+        sort(v.begin(),v.end());
+        reverse(v.begin(),v.end());
+        int n=v.size();
+        string ans="";
+        for(int i=0; i<n && num>0 ;i++)
+        {
+            int t=num/v[i];
+            if(t==0) continue;
+            int k=t;
+            while(k--)
+            {
+                ans+=m[v[i]];
+            }
+            num=num-t*v[i];
+            if(num==0) return ans;
+        }
+        
+        
+        return ans;
+
+
+        
+    }
+};

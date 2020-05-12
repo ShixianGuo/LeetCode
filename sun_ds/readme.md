@@ -42,3 +42,15 @@
 |剑指|面试题42|[连续子数组的最大和](https://leetcode-cn.com/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof/)|[C++](./jz-42_maxSubArray.cpp)|简单|dp、线段树|
 |剑指|面试题38|[字符串的排列](https://leetcode-cn.com/problems/zi-fu-chuan-de-pai-lie-lcof/)|[C++](./jz-38_permutation.cpp)|中等|回溯法|
 |剑指|面试题51|[数组中的逆序对](https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/)|[C++](./jz-51_reversePairs.cpp)|困难|归并|
+|2020.5.10|
+| |70|[爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)|[C++](./70_climbStairs.cpp)|简单|dp、斐波那契|
+| |8|[字符串转换整数 (atoi)](https://leetcode-cn.com/problems/string-to-integer-atoi/)|[C++](./8_myAtoi.cpp)|中等|字符串|
+| |37|[解数独](https://leetcode-cn.com/problems/sudoku-solver/)|[C++](./37_solveSudoku.cpp)|困难|回溯、bitset|
+|2020.5.11|
+| |21|[合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)|[C++](./21_mergeTwoLists.cpp)|简单|合并|
+| |148|[排序链表](https://leetcode-cn.com/problems/sort-list/)|[C++](./148_sortList.cpp)|中等|快慢指针、归并|
+| |25|[K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)|[C++](./25_reverseKGroup.cpp)|困难|分段反转|
+|2020.5.12|
+| |13|[罗马数字转整数](https://leetcode-cn.com/problems/roman-to-integer/)|[C++](./13_romanToInt.cpp)|简单||
+| |12|[整数转罗马数字](https://leetcode-cn.com/problems/integer-to-roman/)|[C++](./12_intToRoman.cpp)|中等||
+| |32|[最长有效括号](https://leetcode-cn.com/problems/longest-valid-parentheses/)|[C++](./32_longestValidParentheses.cpp)|困难|栈、dp、计数法|

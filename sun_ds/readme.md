@@ -46,3 +46,7 @@
 | |70|[爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)|[C++](./70_climbStairs.cpp)|简单|dp、斐波那契|
 | |8|[字符串转换整数 (atoi)](https://leetcode-cn.com/problems/string-to-integer-atoi/)|[C++](./8_myAtoi.cpp)|中等|字符串|
 | |37|[解数独](https://leetcode-cn.com/problems/sudoku-solver/)|[C++](./37_solveSudoku.cpp)|困难|回溯、bitset|
+|2020.5.11|
+| |21|[合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)|[C++](./21_mergeTwoLists.cpp)|简单|合并|
+| |148|[排序链表](https://leetcode-cn.com/problems/sort-list/)|[C++](./148_sortList.cpp)|中等|快慢指针、归并|
+| |25|[K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)|[C++](./25_reverseKGroup.cpp)|困难|分段反转|

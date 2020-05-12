@@ -50,3 +50,7 @@
 | |21|[合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)|[C++](./21_mergeTwoLists.cpp)|简单|合并|
 | |148|[排序链表](https://leetcode-cn.com/problems/sort-list/)|[C++](./148_sortList.cpp)|中等|快慢指针、归并|
 | |25|[K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)|[C++](./25_reverseKGroup.cpp)|困难|分段反转|
+|2020.5.12|
+| |13|[罗马数字转整数](https://leetcode-cn.com/problems/roman-to-integer/)|[C++](./13_romanToInt.cpp)|简单||
+| |12|[整数转罗马数字](https://leetcode-cn.com/problems/integer-to-roman/)|[C++](./12_intToRoman.cpp)|中等||
+| |32|[最长有效括号](https://leetcode-cn.com/problems/longest-valid-parentheses/)|[C++](./32_longestValidParentheses.cpp)|困难|栈、dp、计数法|

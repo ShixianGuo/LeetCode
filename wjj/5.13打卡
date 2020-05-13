@@ -1,0 +1,74 @@
+1360.日期之间间隔几天
+ int m[12]={31,28,31,30,31,30,31,31,30,31,30,31};
+    int daysBetweenDates(string date1, string date2) {
+        return  fabs(getstring(date1)-getstring(date2));
+    }
+    int getstring(string data)
+    {
+       int year=0;
+       int mouth=0;
+       int day=0;
+       for(int i=0;i<4;i++)
+         year=year*10+data[i]-'0';
+        for(int i=5;i<7;i++)
+          mouth=mouth*10+data[i]-'0';
+        for(int i=8;i<10;i++)
+          day=day*10+data[i]-'0';
+        int sum=0;
+        for(int i=1971;i<year;i++)
+          {
+              sum+=isr(i)?366:365;
+          }
+        for(int i=1;i<mouth;i++)
+        {
+            if(i==2)
+              sum+=isr(year)?29:28;
+            else 
+               sum+=m[i-1];
+        }
+        sum+=day;
+        return sum;
+    }
+    bool isr(int year)
+     {
+        if(year%400==0||(year%4==0&&year%100!=0)) return true;
+        return false;
+     }
+题解：闰年的定义：%400==0或者(%4==0&&%100!=0)。
+分别计算输入距离1971-1-1的天数，注意判断闰年和二月即可。
+93.复原ip地址
+    vector<string>res;
+  
+    vector<string> restoreIpAddresses(string s) {
+       string r="";
+     dfs(s,r,0,0);
+     return res;
+    }
+    void dfs(string& s,string r,int i,int j)
+    {
+       if(i==s.size()&&j==4)
+         {  r.pop_back();
+            res.push_back(r);
+            return;          
+         }
+        if(j>4)
+          return;
+         for(int n=1;n<=3&&(i+n)<=s.length();++n)
+          {
+             if(isvalid(s.substr(i,n)))
+             {
+                r+=s.substr(i,n);
+                r+='.'; 
+                dfs(s,r,i+n,j+1); 
+                r.erase(r.size()-n-1,r.size());     
+             }
+          }
+    }
+    bool isvalid(string s)
+    {
+       if(s.empty()||(s[0]=='0'&&s.size()>1)) return false;
+       int num=stoi(s);
+       if(num>=0&&num<=255) return true;
+       return false;  
+    }
+ 题解：这题写的信心全无，用了好久，dfs，每次分别选1~3位新数字，注意判断数字是否有效，除在0~255范围之内，还需要判断第0位不能为0。迭代记录，当前所在串位置和当前已添加数字。

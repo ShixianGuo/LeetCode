@@ -54,3 +54,7 @@
 | |13|[罗马数字转整数](https://leetcode-cn.com/problems/roman-to-integer/)|[C++](./13_romanToInt.cpp)|简单||
 | |12|[整数转罗马数字](https://leetcode-cn.com/problems/integer-to-roman/)|[C++](./12_intToRoman.cpp)|中等||
 | |32|[最长有效括号](https://leetcode-cn.com/problems/longest-valid-parentheses/)|[C++](./32_longestValidParentheses.cpp)|困难|栈、dp、计数法|
+|2020.5.13|
+| |1360|[日期之间隔几天](https://leetcode-cn.com/problems/number-of-days-between-two-dates/)|[C++](./1360_daysBetweenDates.cpp)|简单|日期|
+| |93|[复原IP地址](https://leetcode-cn.com/problems/restore-ip-addresses/)|[C++](./93_restoreIpAddresses.cpp)|中等|回溯法|
+| |1028|[从先序遍历还原二叉树](https://leetcode-cn.com/problems/recover-a-tree-from-preorder-traversal/)|[C++](./1028_recoverFromPreorder.cpp)|困难|栈|

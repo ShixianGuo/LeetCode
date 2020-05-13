@@ -1,0 +1,49 @@
+class Solution {
+public:
+    bool runnian(int y)
+    {
+        if(y%4==0 && y%100 !=0) return true;
+        if(y%400==0) return true;
+        return false;
+    }
+    bool bigmonth(int m)
+    {
+        if(m==1 || m==3 || m==5 ||m==7 ||m==8 || m==10 || m==12) return true;
+        return false;
+    }
+    int cntdate(string str)
+    {
+        int y,m,d;
+        string tmpy=str.substr(0,4);
+        string tmpm=str.substr(5,2);
+        string tmpd=str.substr(8,2);
+        y=atoi(tmpy.c_str());
+        m=atoi(tmpm.c_str());
+        d=atoi(tmpd.c_str());
+        int ans=0;
+        for(int i=1971;i<y;i++)
+        {
+            if(runnian(i)) ans+=366;
+            else ans+=365;
+        }
+        for(int i=1;i<m;i++)
+        {
+            if(i==2)
+            {
+                if(runnian(y)) ans+=29;
+                else ans+=28;
+            }
+            else
+            {
+                if(bigmonth(i)) ans+=31;
+                else ans+=30;
+            }
+        }
+        ans+=(d-1);
+        return ans;
+    }
+    int daysBetweenDates(string date1, string date2) 
+    {
+        return abs(cntdate(date2)-cntdate(date1));
+    }
+};

@@ -1,0 +1,44 @@
+class Solution {
+public:
+    vector<string> ans;
+    bool check(string x)
+    {
+        int len=x.size();
+        if(len>3||len==0) return false;
+        if(x[0]=='0'&& len!=1) return false;
+        //int t=atoi(x);
+        int t=atoi(x.c_str());
+        
+        if(t>255) return false;
+        return true;
+    }
+    void dfs(int u,int num,string s,string tmp,int n)
+        //第u位开始，正在弄第num段
+    {
+        if(u>=n || num>4) return;
+        for(int k=1;k<=3;k++)//本段长度可能性
+        {
+            if(n-u-k>3*(4-num)) continue;
+            string temp=s.substr(u,k);
+            if(check(temp))
+            {
+                if(num==4 && u+k==n) 
+                {
+                    tmp+=temp;
+                    ans.push_back(tmp);
+                    return;
+                }
+                dfs(u+k,num+1,s,tmp+temp+".",n);
+                
+            }
+        }
+    }
+    vector<string> restoreIpAddresses(string s) 
+    {
+        int n=s.size();
+        if(n>12 ||n<4) return ans;
+        string tmp="";
+        dfs(0,1,s,tmp,n);
+        return ans;
+    }
+};

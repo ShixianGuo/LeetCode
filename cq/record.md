@@ -71,3 +71,8 @@
 5.14
 
 刷题记录：[617. 合并二叉树](https://leetcode-cn.com/problems/merge-two-binary-trees/)(E) [102. 二叉树的层序遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/)(M) [145. 二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/)(H)
+
+5.15
+
+刷题记录：[501. 二叉搜索树中的众数](https://leetcode-cn.com/problems/find-mode-in-binary-search-tree/)(E) [94. 二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)(M) [65. 有效数字](https://leetcode-cn.com/problems/valid-number/)(H)
+

@@ -49,3 +49,8 @@
 1 完成leetcode三道题
 2 看操作系统的IO部份内容
 
+## 20200514 Day15
+1 完成leetcode三道题
+2 完成leetcode每日一题
+3 在vs2017中使用ssh远程连接阿里云linux
+4 看了下linux指令

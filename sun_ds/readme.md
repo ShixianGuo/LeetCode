@@ -61,3 +61,7 @@
 |2020.5.14|
 | |617|[合并二叉树](https://leetcode-cn.com/problems/merge-two-binary-trees/)|[C++](./617_mergeTrees.cpp)|简单|递归、迭代|
 | |102|[二叉树的层次遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/)|[C++](./102_levelOrder.cpp)|中等|dfs、迭代(队列)|
+|2020.5.15|
+| |501|[二叉搜索树中的众数](https://leetcode-cn.com/problems/find-mode-in-binary-search-tree/)|[C++](./501_findMode.cpp)|简单|中序遍历|
+| |94|[二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)|[C++](./94_inorderTraversal.cpp)|中等|迭代、递归|
+| |65|[有效数字](https://leetcode-cn.com/problems/valid-number/)|[C++](./65_isNumber.cpp)|困难|字符串、有限状态机|

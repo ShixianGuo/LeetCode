@@ -65,3 +65,7 @@
 | |501|[二叉搜索树中的众数](https://leetcode-cn.com/problems/find-mode-in-binary-search-tree/)|[C++](./501_findMode.cpp)|简单|中序遍历|
 | |94|[二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)|[C++](./94_inorderTraversal.cpp)|中等|迭代、递归|
 | |65|[有效数字](https://leetcode-cn.com/problems/valid-number/)|[C++](./65_isNumber.cpp)|困难|字符串、有限状态机|
+|2020.5.16|
+|剑指|面试题39|[数组中出现次数超过一半的数字](https://leetcode-cn.com/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof/)|[C++](./jz-39_majorityElement.cpp)|简单|投票法|
+|剑指|面试题63|[股票的最大利润](https://leetcode-cn.com/problems/gu-piao-de-zui-da-li-run-lcof/)|[C++](./jz-63_maxProfit.cpp)|中等|单调栈|
+| |233|[数字 1 的个数](https://leetcode-cn.com/problems/number-of-digit-one/)|[C++](./233_countDigitOne.cpp)|困难|数学、递归|

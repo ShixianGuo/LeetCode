@@ -1,0 +1,21 @@
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) 
+    {
+        int n=prices.size();
+        if(n<=1) return 0;
+        int dp[n];
+        memset(dp,0,sizeof dp);
+        dp[0]=-prices[0];
+        int tmp_min=prices[0];
+        for(int i=1;i<n;i++)
+        {
+            dp[i]=max(dp[i-1],prices[i]-tmp_min);
+            tmp_min=min(tmp_min,prices[i]);
+        }
+        if(dp[n-1]<0) return 0;
+        return dp[n-1];
+
+
+    }
+};

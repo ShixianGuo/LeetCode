@@ -1,0 +1,29 @@
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) 
+    {
+        sort(nums.begin(),nums.end());
+        int n=nums.size();
+        return nums[n/2];
+
+    }
+};
+
+////方法2，摩尔投票，2个不同的数相抵消，剩下那个就是ans
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) 
+    {
+        int cnt=0;
+        int ans=nums[0];
+        for(int i=0;i<nums.size();i++)
+        {
+            if(cnt==0) ans=nums[i];
+            if(nums[i]==ans) cnt++;
+            else cnt--;
+        }
+        return ans;
+
+
+    }
+};

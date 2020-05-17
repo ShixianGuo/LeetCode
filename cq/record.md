@@ -76,3 +76,9 @@
 
 刷题记录：[501. 二叉搜索树中的众数](https://leetcode-cn.com/problems/find-mode-in-binary-search-tree/)(E) [94. 二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)(M) [65. 有效数字](https://leetcode-cn.com/problems/valid-number/)(H)
 
+5.16
+
+刷题记录：[面试题39. 数组中出现次数超过一半的数字](https://leetcode-cn.com/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof/)(E) [面试题63. 股票的最大利润](https://leetcode-cn.com/problems/gu-piao-de-zui-da-li-run-lcof/)(M) [233. 数字 1 的个数](https://leetcode-cn.com/problems/number-of-digit-one/)(H)
+
+
+

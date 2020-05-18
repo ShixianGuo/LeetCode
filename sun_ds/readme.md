@@ -58,3 +58,14 @@
 | |1360|[日期之间隔几天](https://leetcode-cn.com/problems/number-of-days-between-two-dates/)|[C++](./1360_daysBetweenDates.cpp)|简单|日期|
 | |93|[复原IP地址](https://leetcode-cn.com/problems/restore-ip-addresses/)|[C++](./93_restoreIpAddresses.cpp)|中等|回溯法|
 | |1028|[从先序遍历还原二叉树](https://leetcode-cn.com/problems/recover-a-tree-from-preorder-traversal/)|[C++](./1028_recoverFromPreorder.cpp)|困难|栈|
+|2020.5.14|
+| |617|[合并二叉树](https://leetcode-cn.com/problems/merge-two-binary-trees/)|[C++](./617_mergeTrees.cpp)|简单|递归、迭代|
+| |102|[二叉树的层次遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/)|[C++](./102_levelOrder.cpp)|中等|dfs、迭代(队列)|
+|2020.5.15|
+| |501|[二叉搜索树中的众数](https://leetcode-cn.com/problems/find-mode-in-binary-search-tree/)|[C++](./501_findMode.cpp)|简单|中序遍历|
+| |94|[二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)|[C++](./94_inorderTraversal.cpp)|中等|迭代、递归|
+| |65|[有效数字](https://leetcode-cn.com/problems/valid-number/)|[C++](./65_isNumber.cpp)|困难|字符串、有限状态机|
+|2020.5.16|
+|剑指|面试题39|[数组中出现次数超过一半的数字](https://leetcode-cn.com/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof/)|[C++](./jz-39_majorityElement.cpp)|简单|投票法|
+|剑指|面试题63|[股票的最大利润](https://leetcode-cn.com/problems/gu-piao-de-zui-da-li-run-lcof/)|[C++](./jz-63_maxProfit.cpp)|中等|单调栈|
+| |233|[数字 1 的个数](https://leetcode-cn.com/problems/number-of-digit-one/)|[C++](./233_countDigitOne.cpp)|困难|数学、递归|

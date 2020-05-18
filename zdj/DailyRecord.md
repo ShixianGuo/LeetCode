@@ -29,3 +29,8 @@
 ||98|[验证二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree/)|[C++](./leetcode_98.cpp)|Medium|二叉树|
 |5.8|
 ||41|[寻找缺失的第一个正数](https://leetcode-cn.com/problems/first-missing-positive/)|[C++](./leetcode_41.cpp)|Hard|原地算法，哈希表|
+|5.9|
+||139|[单词拆分](https://leetcode-cn.com/problems/word-break/)|[C++](./leetcode_139.cpp)|Medium|动态规划|
+|5.18|
+||13|[罗马数字转整数](https://leetcode-cn.com/problems/roman-to-integer/)|[C++](./leetcode_13.cpp)|Easy|字符串|
+||12|[整数转罗马数字](https://leetcode-cn.com/problems/integer-to-roman/submissions/)|[C++](./leetcode_12.cpp)|Medium|字符串|

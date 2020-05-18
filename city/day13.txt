@@ -1,0 +1,133 @@
+1360. 日期之间隔几天
+请你编写一个程序来计算两个日期之间隔了多少天。
+
+日期以字符串形式给出，格式为 YYYY-MM-DD，如示例所示。
+
+ 
+
+示例 1：
+
+输入：date1 = "2019-06-29", date2 = "2019-06-30"
+输出：1
+
+示例 2：
+
+输入：date1 = "2020-01-15", date2 = "2019-12-31"
+输出：15
+
+ 
+
+提示：
+
+    给定的日期是 1971 年到 2100 年之间的有效日期。
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/number-of-days-between-two-dates
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+class Solution {
+  public:
+	  bool isleap(int y) {
+		  if (((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0))) {
+			  return true;
+		  }
+		  return false;
+	  }
+	  int GetData(string date1) {
+		  int y, m, d;
+		  int mm[13] = { -1,31,28,31,30,31,30,31,31,30,31,30,31 };
+		  const char* d1 = date1.data();
+		  sscanf_s(d1, "%d-%d-%d", &y, &m, &d);
+		  int ans = 0;
+		  for (int i = 1970; i < y; i++) {
+			  if (isleap(i)) {
+				  ans = ans + 366;
+			  }
+			  else
+				  ans = ans + 365;
+		  }
+		  for (int i = 1; i < m; i++) {
+			  if (i == 2 && isleap(y)) {
+				  ans = ans + 29;
+			  }
+			  else {
+				  ans = ans + mm[i];
+			  }
+		  }
+		  ans = ans + d;
+		  return ans;
+	  }
+	  int daysBetweenDates(string date1, string date2) {
+		  int x1 = GetData(date1);
+		  int x2 = GetData(date2);
+		  return abs(x1 - x2);
+	  }
+  };
+
+
+93. 复原IP地址
+
+给定一个只包含数字的字符串，复原它并返回所有可能的 IP 地址格式。
+
+有效的 IP 地址正好由四个整数（每个整数位于 0 到 255 之间组成），整数之间用 '.' 分隔。
+
+ 
+
+示例:
+
+输入: "25525511135"
+输出: ["255.255.11.135", "255.255.111.35"]
+
+
+class Solution {
+  public:
+	  bool isValid(string ip)
+	  {
+		  int val = stoi(ip);
+		  if (val > 255)    
+			  return false;
+		  if (ip.size() >= 2 && ip[0] == '0')
+			  return false;
+		  return true;
+	  }
+	  void dfs(string& s, int pos, vector<string> &path, vector<string>& res)
+	  {
+		  //首先判断剩余的位数，是不是还能满足要求，比如25525511135，若2.5.5.25511135显然不满足，这可以预判
+		  int maxLen = (4 - path.size()) * 3;
+
+		  if (s.size() - pos > maxLen)    
+			  return;
+		  //递归出口
+		  if (path.size() == 4 && pos == s.size()) {
+			  string ans = "";
+			  for (int i = 0; i < 4; ++i) {
+				  ans += path[i];
+				  if (i != 3)    
+					  ans += ".";
+			  }
+			  res.push_back(ans);
+			  return;
+		  }
+		  //一个片段最多包含三个字符
+		  for (int i = pos; i < s.size() && i <= pos + 2; ++i) {
+			  string ip = s.substr(pos, i - pos + 1);
+			  //判断提取的字符片段是否合法
+			  if (!isValid(ip))    
+				  continue;
+			  path.push_back(ip);
+			  dfs(s, i + 1, path, res);
+			  //回溯、删除最后一个元素
+			  path.pop_back();
+		  }
+	  }
+	  vector<string> restoreIpAddresses(string s)
+	  {
+		  //找3个.的位置,每个.之前组成的的数值必须要小于255，且以0开头的除非数字是0本身，否则也是非法
+		  vector<string> res;
+		  if (s.size() == 0 || s.size() < 4)    
+			  return res;
+		  //path保存分成四组的字符串
+		  vector<string> path;
+		  dfs(s, 0, path, res);
+		  return res;
+	  }
+  };

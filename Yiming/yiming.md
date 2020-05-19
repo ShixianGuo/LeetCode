@@ -10,12 +10,13 @@ list：key-value
     -找到第一个递减元素，将后一个元素赋给他，然后判断数列是否非递减
     -将他赋值给后一个元素，然后判断数列是否非递减
     -如果以上两步操作可以得到一个非递减数列，那就返回true 否则false
-------------------------------------------------------------------------------------------------------------------------------
+---------------------
 开始跟着小组选题打卡
 5.6 day 1
-------------------------------------------------------------------------------------------------------------------------------
+---------------------
 
 1290. 二进制链表转整数
+```C++
 class Solution {
 public:
     int getDecimalValue(ListNode* head) {
@@ -27,13 +28,13 @@ public:
         return res;
     }
 };
-------------------------------------------------------------------------------------------------------------------------------
+```
+--------------
 执行用时 :0 ms, 在所有 C++ 提交中击败了100.00%的用户
 内存消耗 :6.6 MB, 在所有 C++ 提交中击败了100.00%的用户
 
 468. 验证IP地址
-
-
+```C++
 class Solution {
 public:
     vector<string> SplitString(const string& s, const string& c)
@@ -100,7 +101,7 @@ public:
     string validIPAddress(string IP) {
         if(IP.size()==0) return "Neither";
         vector<string> res;
-        
+
         if(IP.find('.')!=string::npos){
             if(IP.back()=='.') return "Neither";
             res=SplitString(IP, ".");
@@ -125,6 +126,7 @@ public:
         }
     }
     };
+```
 ------------------------------------------------------------------------------------------------------------------------------
 5.7 day 2
 
@@ -132,6 +134,7 @@ public:
 
 98. 验证二叉搜索树
 中序遍历后看是否升序就好了
+```C++
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -171,6 +174,7 @@ public:
 
     }
 };
+```
 ------------------------------------------------------------------------------------------------------------------------------
 5.8 day 3
 
@@ -178,7 +182,7 @@ public:
 还有一个，减法的实现，其实是通过加法来完成的。
 
 想一下相加顺序，要先入后出，那就是栈了
-
+```C++
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -221,25 +225,21 @@ public:
         return node;
     }
 };
+```
 ------------------------------------------------------------------------------------------------------------------------------
 5.9 day 4
 面试题42. 连续子数组的最大和 这个和股票的最大收益是一样的
 
-面试题38. 字符串的排列 
+面试题38. 字符串的排列
 组合的题目，dfs，剪枝。在dfs之前对字符串进行排序。然后dfs中利用visited判断当前字母和上一个是否相同，如果相同，跳过。
 函数外三个全局变量：
-vector<string> res; //保存全部组合结果
-string tmp=""; //中间单个组合的结果
-int n;//记录一共有多少个可选字母
-vector<bool> visited;//记录每个字母是否访问过
-
-
+```C++
 class Solution {
 public:
-    vector<string> res;
-    string tmp="";
-    vector<bool> visited;
-    int n;
+    vector<string> res; //保存全部组合结果
+    string tmp="";//中间单个组合的结果
+    vector<bool> visited;//记录每个字母是否访问过
+    int n;//记录一共有多少个可选字母
     void dfs(string s,int count){
         if(count==n){
             res.push_back(tmp);
@@ -276,7 +276,7 @@ public:
         return res;
     }
 };
-
+```
 
 ------------------------------------------------------------------------------------------------------------------------------
 5.10 day 5
@@ -290,4 +290,130 @@ public:
 21. 合并两个有序链表：这个我之前做过了，当时通过了就没看题解，今天看下递归实现的答案，真的太简洁了，优雅～
     看完对递归和栈也有了进一步理解。
     148. 排序链表:同样是归并
-    
+------------------------------------------------------------------------------------------------------------------------------
+5.12 day 7
+13.罗马数字转整数
+```C++
+    class Solution {
+    public:
+        int romanToInt(string s) {
+        map<char,int>translate{
+        {'I',1},
+        {'V',5},
+        {'X',10},
+        {'L',50},
+        {'C',100},
+        {'D',500},
+        {'M',1000}
+        };
+        int res=0;
+        for(int i=s.size()-1;i>0;i--){
+            int val1=translate[s[i]];
+            int val2=translate[s[i-1]];
+            if(val1==5||val1==10){
+                if(val2==1){
+                    res+=val1-val2-val2;
+                }
+                else{
+                    res+=val1;
+                }
+            }
+            else if(val1==50||val1==100){
+                if(val2==10){
+                    res+=val1-val2-val2;
+                }
+                else{
+                    res+=val1;
+                }
+            }
+            else if(val1==500||val1==1000){
+                if(val2==100){
+                    res+=val1-val2-val2;
+                }
+                else{
+                    res+=val1;
+                }
+            }
+            else{
+                res+=val1;
+            }
+        }
+        res+=translate[s[0]];
+
+        return res;
+        }
+    };
+```
+12. 整数转罗马数字
+```C++
+class Solution {
+public:
+    string intToRoman(int num) {
+        map<int,string>translate{
+            {1000,"M"},
+            {900,"CM"},
+            {500,"D"},
+            {400,"CD"},
+            {100,"C"},
+            {90,"XC"},
+            {50,"L"},
+            {40,"XL"},
+            {10,"X"},
+            {9,"IX"},
+            {5,"V"},
+            {4,"IV"},
+            {1,"I"},
+        };
+        string res="";
+        while(num>0){
+            for(auto rit=translate.rbegin();rit!=translate.rend();rit++) {
+                auto val=*rit;
+                // cout<<num<<" "<<val.first<<endl;
+                if(num-val.first>=0){
+                    res+=val.second;
+                    num-=val.first;
+                    break;
+                }
+            }
+        }
+        return res;
+    }
+};
+```
+
+----------------------------------------------------------
+5.13 day 8
+1360 求日期之间间隔
+```C++
+class Solution {
+public:
+    int _days[13] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
+    int daysBetweenDates(string date1, string date2) {
+        return abs(getday(date1)-getday(date2));
+    }
+
+    int getday(string data){
+        int year,month,day;
+        sscanf(data.c_str(),"%d-%d-%d",&year,&month,&day);
+
+        int res=0;
+        for(int i=1971;i<year;i++){
+            res+=365 + issleep(i);
+        }
+        for(auto i=1:month){
+            if(i==2){
+                res+=28+issleep(year);
+            }
+            else{
+                res+=_days[i];
+            }
+        }
+    }
+
+    bool issleep(int year){
+        return year % 4==0 && year%100!=0 ||year%400==0;
+    }
+};
+```
+93 复原ip地址

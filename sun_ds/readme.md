@@ -69,3 +69,6 @@
 |剑指|面试题39|[数组中出现次数超过一半的数字](https://leetcode-cn.com/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof/)|[C++](./jz-39_majorityElement.cpp)|简单|投票法|
 |剑指|面试题63|[股票的最大利润](https://leetcode-cn.com/problems/gu-piao-de-zui-da-li-run-lcof/)|[C++](./jz-63_maxProfit.cpp)|中等|单调栈|
 | |233|[数字 1 的个数](https://leetcode-cn.com/problems/number-of-digit-one/)|[C++](./233_countDigitOne.cpp)|困难|数学、递归|
+|2020.5.18|
+| |557|[反转字符串中的单词 III](https://leetcode-cn.com/problems/reverse-words-in-a-string-iii/)|[C++](./557_reverseWords.cpp)|简单|双指针|
+| |54|[螺旋矩阵](https://leetcode-cn.com/problems/spiral-matrix/)|[C++](./54_spiralOrder.cpp)|中等|模拟边界|

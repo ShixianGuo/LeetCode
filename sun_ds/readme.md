@@ -72,3 +72,7 @@
 |2020.5.18|
 | |557|[反转字符串中的单词 III](https://leetcode-cn.com/problems/reverse-words-in-a-string-iii/)|[C++](./557_reverseWords.cpp)|简单|双指针|
 | |54|[螺旋矩阵](https://leetcode-cn.com/problems/spiral-matrix/)|[C++](./54_spiralOrder.cpp)|中等|模拟边界|
+|2020.5.19|
+| |9|[回文数](https://leetcode-cn.com/problems/palindrome-number/)|[C++](./9_isPalindrome.cpp)|简单|排除负数和0结尾、一半对比|
+| |5|[最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/)|[C++](./5_longestPalindrome.cpp)|中等|中心扩散、dp|
+| |124|[二叉树中的最大路径和](https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/)|[C++](./124_maxPathSum.cpp)|困难|后序遍历|

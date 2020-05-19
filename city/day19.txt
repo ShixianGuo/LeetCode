@@ -1,0 +1,154 @@
+9. 回文数
+
+判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。
+
+示例 1:
+
+输入: 121
+输出: true
+
+示例 2:
+
+输入: -121
+输出: false
+解释: 从左向右读, 为 -121 。 从右向左读, 为 121- 。因此它不是一个回文数。
+
+示例 3:
+
+输入: 10
+输出: false
+解释: 从右向左读, 为 01 。因此它不是一个回文数。
+
+进阶:
+
+你能不将整数转为字符串来解决这个问题吗？
+
+ class Solution {
+  public:
+	  bool isPalindrome(int x) {
+		  string s = to_string(x);
+		  int len = s.length();
+		  int le = 0;
+		  int ri = len - 1;
+		  int flag = 0;
+		  while (le <= ri ) {
+			  if (s[le] == s[ri]) {
+				  le++;
+				  ri--;
+			  }
+			  else {
+				  flag = 1;
+				  break;
+			  }
+		  }
+		  if (flag == 0) {
+			  return true;
+		  }
+		  else {
+			  return false;
+		  }
+	  }
+  };
+
+
+5. 最长回文子串
+
+给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。
+
+示例 1：
+
+输入: "babad"
+输出: "bab"
+注意: "aba" 也是一个有效答案。
+
+示例 2：
+
+输入: "cbbd"
+输出: "bb"
+
+---------------------马拉车算法---------------------------
+
+class Solution {
+  public:
+	  string longestPalindrome(string s)
+	  {
+		  string manaStr = "$#";
+		  for (int i = 0; i < s.size(); i++) //首先构造出新的字符串
+		  {
+			  manaStr += s[i];
+			  manaStr += '#';
+		  }
+		  vector<int> rd(manaStr.size(), 0);//用一个辅助数组来记录最大的回文串长度，注意这里记录的是新串的长度，原串的长度要减去1
+		  int pos = 0, mx = 0;
+		  int start = 0, maxLen = 0;
+		  for (int i = 1; i < manaStr.size(); i++)
+		  {
+			  rd[i] = i < mx ? min(rd[2 * pos - i], mx - i) : 1;
+			  while (i + rd[i] < manaStr.size() && i - rd[i]>0 && manaStr[i + rd[i]] == manaStr[i - rd[i]])//这里要注意数组越界的判断，源代码没有注意，release下没有报错
+				  rd[i]++;
+			  if (i + rd[i] > mx) //如果新计算的最右侧端点大于mx,则更新pos和mx
+			  {
+				  pos = i;
+				  mx = i + rd[i];
+			  }
+			  if (rd[i] - 1 > maxLen)
+			  {
+				  start = (i - rd[i]) / 2;
+				  maxLen = rd[i] - 1;
+			  }
+		  }
+		  return s.substr(start,maxLen);
+	  }
+  };
+
+
+124. 二叉树中的最大路径和
+
+给定一个非空二叉树，返回其最大路径和。
+
+本题中，路径被定义为一条从树中任意节点出发，达到任意节点的序列。该路径至少包含一个节点，且不一定经过根节点。
+
+示例 1:
+
+输入: [1,2,3]
+
+       1
+      / \
+     2   3
+
+输出: 6
+
+示例 2:
+
+输入: [-10,9,20,null,null,15,7]
+
+   -10
+   / \
+  9  20
+    /  \
+   15   7
+
+输出: 42
+
+
+
+ class Solution {
+  public:
+	  int result;
+
+	  int maxPathSum(TreeNode* root) {
+		  if (!root) return 0;
+		  result = root->val;
+		  dfs(root);
+		  return result;
+	  }
+	  //dfs递归求解以root为根节点的子树的和
+	  int dfs(TreeNode* root) {
+		  if (!root) return 0;
+		  int left = max(dfs(root->left), 0);
+		  int right = max(dfs(root->right), 0);
+		  result = max(root->val + left + right, result);
+		  return root->val + max(0, max(left, right));
+	  }
+
+  };

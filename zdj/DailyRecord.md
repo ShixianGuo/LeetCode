@@ -34,3 +34,9 @@
 |5.18|
 ||13|[罗马数字转整数](https://leetcode-cn.com/problems/roman-to-integer/)|[C++](./leetcode_13.cpp)|Easy|字符串|
 ||12|[整数转罗马数字](https://leetcode-cn.com/problems/integer-to-roman/submissions/)|[C++](./leetcode_12.cpp)|Medium|字符串|
+|5.20|
+||2|[两数相加](https://leetcode-cn.com/problems/add-two-numbers/)|[C++](./leetcode_2.cpp)|Medium|链表|
+||445|[两数相加II](https://leetcode-cn.com/problems/add-two-numbers-ii/)|[C++](./leetcode_445.cpp)|Medium|链表|
+||463|[岛屿的周长](https://leetcode-cn.com/problems/island-perimeter/)|[C++](./leecode_463.cpp)|Easy|避免重复计算|
+||701|[二叉搜索树中的插入](https://leetcode-cn.com/problems/insert-into-a-binary-search-tree/)|[C++](./leetcode_701.cpp)|Medium|二叉搜索树|
+||1335|[工作计划的最低难度](https://leetcode-cn.com/problems/minimum-difficulty-of-a-job-schedule/)|[C++](./leetcode_1335.cpp)|Hard|区间最值+动态规划|

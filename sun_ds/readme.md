@@ -69,3 +69,14 @@
 |剑指|面试题39|[数组中出现次数超过一半的数字](https://leetcode-cn.com/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof/)|[C++](./jz-39_majorityElement.cpp)|简单|投票法|
 |剑指|面试题63|[股票的最大利润](https://leetcode-cn.com/problems/gu-piao-de-zui-da-li-run-lcof/)|[C++](./jz-63_maxProfit.cpp)|中等|单调栈|
 | |233|[数字 1 的个数](https://leetcode-cn.com/problems/number-of-digit-one/)|[C++](./233_countDigitOne.cpp)|困难|数学、递归|
+|2020.5.18|
+| |557|[反转字符串中的单词 III](https://leetcode-cn.com/problems/reverse-words-in-a-string-iii/)|[C++](./557_reverseWords.cpp)|简单|双指针|
+| |54|[螺旋矩阵](https://leetcode-cn.com/problems/spiral-matrix/)|[C++](./54_spiralOrder.cpp)|中等|模拟边界|
+|2020.5.19|
+| |9|[回文数](https://leetcode-cn.com/problems/palindrome-number/)|[C++](./9_isPalindrome.cpp)|简单|排除负数和0结尾、一半对比|
+| |5|[最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/)|[C++](./5_longestPalindrome.cpp)|中等|中心扩散、dp|
+| |124|[二叉树中的最大路径和](https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/)|[C++](./124_maxPathSum.cpp)|困难|后序遍历|
+|2020.5.20|
+| |463|[岛屿的周长](https://leetcode-cn.com/problems/island-perimeter/)|[C++](./463_islandPerimeter.cpp)|简单|dfs、边的个数|
+| |701|[二叉搜索树中的插入操作](https://leetcode-cn.com/problems/insert-into-a-binary-search-tree/)|[C++](./701_insertIntoBST.cpp)|中等|二分搜索| 
+| |1335|[工作计划的最低难度](https://leetcode-cn.com/problems/minimum-difficulty-of-a-job-schedule/)|[C++](./1355_minDifficulty.cpp)|困难|dp|

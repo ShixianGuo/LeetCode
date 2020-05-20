@@ -13,7 +13,7 @@
 class Solution {
  public:
   TreeNode* insertIntoBST(TreeNode* root, int val) {
-    // 迭代
+    // 递归
     // if (root == nullptr) return new TreeNode(val);
     // if (val < root->val) {
     //     root->left = insertIntoBST(root->left, val);
@@ -22,7 +22,7 @@ class Solution {
     // }
     // return root;
 
-    // 递归
+    // 非递归
     if (root == nullptr) return new TreeNode(val);
     TreeNode *cur = root, *pre = root;
     while (cur) {

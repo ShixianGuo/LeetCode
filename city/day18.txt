@@ -1,0 +1,61 @@
+
+557. 反转字符串中的单词 III
+
+给定一个字符串，你需要反转字符串中每个单词的字符顺序，同时仍保留空格和单词的初始顺序。
+
+示例 1:
+
+输入: "Let's take LeetCode contest"
+输出: "s'teL ekat edoCteeL tsetnoc" 
+
+注意：在字符串中，每个单词由单个空格分隔，并且字符串中不会有任何额外的空格。
+
+
+class Solution {
+public:
+    string reverseWords(string s) {
+        int idx = 0, srt = 0;
+        while (idx < s.size()) {
+            if (s[idx] == ' ') {
+                reverse(s.begin() + srt, s.begin() + idx);
+                srt = idx + 1;
+            }
+            idx++;
+        }
+        //反转最后一个单词
+        reverse(s.begin() + srt, s.begin() + idx);
+
+        return s;
+    }
+};
+
+
+------------------------输出螺旋矩阵---------------------
+
+ class Solution {
+  public:
+	  vector<int> spiralOrder(vector<vector<int>>& matrix) {
+		  vector <int> ans;
+		  if (matrix.empty()) return ans; //若数组为空，直接返回答案
+		  int u = 0; //赋值上下左右边界
+		  int d = matrix.size() - 1;
+		  int l = 0;
+		  int r = matrix[0].size() - 1;
+		  while (true)
+		  {
+			  for (int i = l; i <= r; ++i)
+				  ans.push_back(matrix[u][i]); //向右移动直到最右
+			  if (++u > d) break; //重新设定上边界，若上边界大于下边界，则遍历遍历完成，下同
+			  for (int i = u; i <= d; ++i) 
+				  ans.push_back(matrix[i][r]); //向下
+			  if (--r < l) break; //重新设定右边界
+			  for (int i = r; i >= l; --i) 
+				  ans.push_back(matrix[d][i]); //向左
+			  if (--d < u) break; //重新设定下边界
+			  for (int i = d; i >= u; --i) 
+				  ans.push_back(matrix[i][l]); //向上
+			  if (++l > r) break; //重新设定左边界
+		  }
+		  return ans;
+	  }
+  };

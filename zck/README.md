@@ -27,7 +27,14 @@ leetcode501和leetcode55， hard题不写
 面试题63和leetcode56，hard题不写
 
 5月22日
+
 leetcode105 整理了dfs和bfs题
+
+5月23日
+
+leetcode76(不能过所有case，超时), leetcode57, leetcode58, leetcode59, leetcode60全排列超时
+
+
 
 
 

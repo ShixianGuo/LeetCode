@@ -62,6 +62,10 @@ leetcode198， leetcode81， leetcode974, leetcode98， leetcode100, leetcode82,
 
 leletcode91， leetcode95， leetcode96，树和递归这一块薄弱，需要加强练习
 
+6月1日
+
+letcode101， leetcode103， leetcode104(dfs和bfs) 每日一题leetcode1431
+
 
 
 

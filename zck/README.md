@@ -74,6 +74,10 @@ leetcode118，leetcode119，面试题64, leetcode114, leetcode116, leetcode117
 
 leetcode112， leetcode113， leetcode120， leetcode238， leetcode837全排列结果有误
 
+6月5日
+
+leetcode105， leetcode106，面试题29
+
 
 
 

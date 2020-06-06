@@ -68,7 +68,7 @@ letcode101， leetcode103， leetcode104(dfs和bfs) 每日一题leetcode1431， 
 
 6月2日
 
-leetcode118，leetcode119，面试题64, leetcode114, leetcode116, leetcode117
+leetcode118，leetcode119，面试题64, leetcode116, leetcode117
 
 6月4日
 
@@ -77,6 +77,10 @@ leetcode112， leetcode113， leetcode120， leetcode238， leetcode837全排列
 6月5日
 
 leetcode105， leetcode106，面试题29
+
+6月6日
+
+leetcode108， leetcode109， leetcode114， leetcode128
 
 
 

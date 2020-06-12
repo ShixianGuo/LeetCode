@@ -88,7 +88,7 @@ leetcode121， leetcode122
 
 6月12日
 
-leetcode150， leetcode151， leetcode152， leetcode153，leetcode155
+leetcode141， leetcode142， leetcode144， leetcode150， leetcode151， leetcode152， leetcode153，leetcode155
 
 
 

@@ -1,50 +1,44 @@
- #include <iostream>
-
- using namespace std;
-
- struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode(int x) : val(x), next(NULL) {}
- };
- 
-
-ListNode* sortList(ListNode* head){
-    ListNode * res = new ListNode(head->val);
-
-    ListNode *cur = head->next;
-    while(cur != NULL){
-        if(cur->val < res->val){
-            cur->next = res;
-            res = cur;
+class Solution {
+public:
+    ListNode* sortList(ListNode* head) {
+        if (head == NULL || head->next == NULL)
+        {
+            return head;
         }
-        else{
-            ListNode *pre = res;
-            ListNode *post = pre->next;
-            while(post != NULL && post->val < cur->val){
-                pre = pre->next;
-                post = pre->next;
+        ListNode* pmid;
+        ListNode* mid = head;
+        ListNode* trail = head;
+        while (trail && trail->next)
+        {
+            pmid = mid;
+            mid = mid->next;
+            trail = trail->next->next;
+        }
+        pmid->next = NULL;
+
+        return twoWayMerge(sortList(head), sortList(mid));
+    }
+
+    ListNode* twoWayMerge(ListNode* l1, ListNode* l2) {
+        ListNode header(-1);
+        ListNode *p = &header;
+        while (l1 && l2)
+        {
+            if (l1->val < l2->val)
+            {
+                p->next = l1;
+                l1 = l1->next;
             }
-            pre->next = cur;
-            cur->next = post;
+            else
+            {
+                p->next = l2;
+                l2 = l2->next;
+            }
+            p = p->next;
         }
-        cur = cur->next;
+
+        p->next = l1 == NULL ? l2 : l1;
+
+        return header.next;
     }
-    return res;
-}
-
-int main(){
-    ListNode *head = new ListNode(4);
-    head->next = new ListNode(3);
-    head->next->next = new ListNode(2);
-    head->next->next->next = new ListNode(5);
-
-    ListNode*res = sortList(head);
-    ListNode *cur = res;
-    while(cur != NULL){
-        cout << cur->val << endl;
-        cur = cur->next;
-    }
-    return 0;
-
-}
+};

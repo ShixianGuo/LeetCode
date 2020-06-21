@@ -105,3 +105,7 @@ leetcode132， leetcode160， leetcode162， leetcode162二分查找法， leetc
 6月18日
 
 leetcode48， leetcode167， leetcode171，leetcode179， leetcode187，leetcode190, leetcode191, leetcode199
+
+6月21日
+
+leetcode1114， leetcode1115， leetcode166， leetcode202， leetode204不能过所有case，超时， leetcode205不能过所有case，leetcode206 leetcode209， 

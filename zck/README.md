@@ -113,3 +113,7 @@ leetcode1114， leetcode1115， leetcode166， leetcode202， leetode204不能�
 6月22日
 
 leetcode211， leetcode219， leetcode228， leetcode1658
+
+6月23日
+
+leetcode101_new, leetcode111_new, leetcode234需要debug

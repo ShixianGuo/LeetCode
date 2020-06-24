@@ -117,3 +117,7 @@ leetcode211， leetcode219， leetcode228， leetcode1658
 6月23日
 
 leetcode101_new, leetcode111_new, leetcode234需要debug
+
+6月24日
+
+leetcode323（bfs和并查集方法）leetcode429 leetcode490

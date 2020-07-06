@@ -1,11 +1,24 @@
-class Solution {
-public:
-    int climbStairs(int n) {
-        if(n == 0 || n == 1)
-            return 1;
-        vector<int> res(n+1, 1);
-        for(int i = 2; i < n + 1; i++)
-            res[i] = res[i-1] + res[i-2];  
-        return res[n];
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int climbStairs(int n) {
+    int pre = 1;
+    int cur = 1;
+    for(int i = 1; i <= n; i++){
+        int tmp = cur;
+        cur = pre + cur;
+        pre = tmp;
     }
-};
+    return cur;     
+}
+
+int main(){
+    cout << climbStairs(1) << endl;
+    cout << climbStairs(2) << endl;
+    cout << climbStairs(3) << endl;
+    cout << climbStairs(4) << endl;
+
+    return 0;
+}
